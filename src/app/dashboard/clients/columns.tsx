@@ -114,7 +114,7 @@ export const getColumns = (plans: Plan[]): ColumnDef<ClientData>[] => [
                     <AssignPlanModal
                         userId={row.original.id}
                         userName={row.original.full_name || 'Cliente'}
-                        plans={plans}
+                        plans={plans as any}
                     />
                 </div>
             )
