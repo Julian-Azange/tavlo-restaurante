@@ -4,8 +4,6 @@ import { createClient } from '../utils/supabase/server'
 // --- COMPONENTES UI COMUNES ---
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 
-// --- COMPONENTES DE ADMIN ---
-import { AdminScanner } from './admin-scanner' // <--- Asegúrate de tener este archivo creado
 import { Users, UtensilsCrossed, TrendingUp } from 'lucide-react'
 
 // --- COMPONENTES DE CLIENTE ---
