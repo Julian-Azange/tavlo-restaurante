@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Scanner } from '@yudiel/react-qr-scanner'
-import { processRedemption } from '@/app/dashboard/scanner/actions' // Asegúrate de tener esta ruta correcta según el paso anterior
+import { processConsumption } from '@/app/dashboard/scanner/actions' // Asegúrate de tener esta ruta correcta según el paso anterior
 import { toast } from 'sonner'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Loader2, CheckCircle2, XCircle } from 'lucide-react'
@@ -25,7 +25,7 @@ export function AdminScanner() {
 
             // 3. Llamar al servidor para descontar
             toast.info('Procesando tiquete...')
-            const res = await processRedemption(qrData.subId)
+            const res = await processConsumption(qrData.subId)
 
             if (res.error) {
                 setLastResult({ status: 'error', msg: res.error })
